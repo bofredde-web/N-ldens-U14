@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Näldens IF U14 – Matcher 2026/27</title>
+<style>
+:root{--blue:#263b87;--yellow:#ffe500;--bg:#f4f6fb}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#182033}
+.hero{background:linear-gradient(145deg,#17265d,#334aa0);padding:28px 18px 30px;text-align:center;color:white}
+.logo{width:125px;height:125px;object-fit:cover;border-radius:50%;background:#ffe500;box-shadow:0 8px 25px #0005}
+h1{margin:16px 0 4px;font-size:28px}.sub{opacity:.9;font-size:16px}
+.wrap{max-width:720px;margin:auto;padding:16px}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 16px}
+button{border:0;border-radius:13px;padding:13px;font-size:15px;font-weight:700;cursor:pointer}
+.primary{background:var(--yellow);color:#17265d}.secondary{background:white;color:#263b87}
+.month{font-size:19px;font-weight:800;margin:22px 4px 10px;color:#263b87}
+.card{background:white;border-radius:16px;margin:9px 0;padding:14px;box-shadow:0 2px 10px #15245d12;display:flex;gap:12px;align-items:center}
+.date{min-width:58px;text-align:center;background:#eef1fa;border-radius:12px;padding:7px 4px;color:#263b87;font-weight:800}
+.day{font-size:12px;text-transform:uppercase}.num{font-size:22px}
+.info{flex:1}.opp{font-size:17px;font-weight:800}.meta{font-size:14px;color:#667085;margin-top:3px}
+.tag{font-size:12px;font-weight:800;padding:5px 8px;border-radius:8px;white-space:nowrap}
+.home{background:#fff4a8;color:#695c00}.away{background:#dfe7ff;color:#263b87}
+.add{margin-top:8px;background:#eef3ff;color:#1d4ed8;padding:8px 10px;font-size:13px}
+.note{font-size:12px;color:#8a5a00;background:#fff7d6;border-radius:9px;padding:8px;margin-top:8px}
+.footer{text-align:center;color:#667085;font-size:12px;padding:25px 0}
+@media(max-width:500px){.actions{grid-template-columns:1fr}.tag{display:block}}
+</style>
+</head>
+<body>
+<header class="hero">
+<img class="logo" src="naldens_if_logo.png" alt="Näldens IF">
+<h1>Näldens IF U14</h1><div class="sub">Matcher 2026/2027</div>
+</header>
+<main class="wrap">
+<div class="actions">
+<button class="primary" onclick="downloadICS()">⬇ Hela säsongen</button>
+<button class="secondary" onclick="copyPage()">🔗 Dela sidan</button>
+</div>
+<div id="list"></div>
+<div class="footer">Näldens IF · U14 · Säsongen 2026/27</div>
+</main>
+<script>
+const events=[["2026-10-03", "16:00", "Sundsvall", "Borta", "Brandcode Center"], ["2026-10-04", "12:15", "Kovland", "Borta", "FD Maskin Arena"], ["2026-10-04", "15:15", "Kovland", "Borta", "FD Maskin Arena"], ["2026-10-18", "10:00", "Sveg", "Hemma", "Näskotthallen"], ["2026-10-18", "14:00", "Sveg", "Hemma", "Näskotthallen"], ["2026-10-20", "19:00", "Svenstavik", "Hemma", "Näskotthallen"], ["2026-10-24", "09:45", "Ånge IK", "Borta", "Kastbergshallen"], ["2026-10-30", "20:00", "Östersund", "Borta", "Östersund Arena Hall A"], ["2026-11-14", "10:00", "Järpen", "Hemma", "Näskotthallen"], ["2026-11-21", "18:00", "Kovland", "Hemma", "Näskotthallen"], ["2026-12-05", "11:00", "Sveg", "Borta", "Svegs Ishall"], ["2026-12-13", "17:00", "Svenstavik", "Borta", "Svenstaviks ishall"], ["2027-01-09", "20:00", "Östersund", "Hemma", "Näskotthallen"], ["2027-01-10", null, "Astor", "Borta", "Näskotthallen"], ["2027-01-16", "11:00", "Strömsund", "Hemma", "Näskotthallen"], ["2027-01-20", null, "Järpen", "Borta", "Röjsmohallen"], ["2027-01-24", "11:00", "Ånge IK", "Hemma", "Näskotthallen"], ["2027-01-30", "15:00", "Sundsvall", "Hemma", "Näskotthallen"], ["2027-01-30", "15:00", "Sundsvall", "Hemma", "Näskotthallen"], ["2027-02-16", "19:00", "Svenstavik", "Hemma", "Näskotthallen"], ["2027-02-27", null, "Ånge IK", "Borta", "Kastbergshallen"], ["2027-03-06", null, "Östersund", "Borta", "Östersund Arena Hall A"], ["2027-03-07", "10:30", "Astor", "Hemma", "Näskotthallen"], ["2027-03-07", "14:00", "Astor", "Hemma", "Näskotthallen"], ["2027-03-13", "10:00", "Strömsund", "Borta", "Dunderhallen"], ["2027-03-13", "14:00", "Strömsund", "Borta", "Dunderhallen"], ["2027-03-20", "10:00", "Järpen", "Hemma", "Näskotthallen"]];
+const months=["januari","februari","mars","april","maj","juni","juli","augusti","september","oktober","november","december"];
+function gcal(e){
+ const [d,t,o,h,p]=e;if(!t){alert("Tiden för "+o+" är inte fastställd.");return;}
+ const start=d.replaceAll("-","")+"T"+t.replace(":","")+"00";
+ const x=new Date(d+"T"+t+":00");x.setHours(x.getHours()+2);
+ const pad=n=>String(n).padStart(2,"0");
+ const end=x.getFullYear()+pad(x.getMonth()+1)+pad(x.getDate())+"T"+pad(x.getHours())+pad(x.getMinutes())+"00";
+ const q=new URLSearchParams({action:"TEMPLATE",text:"Näldens U14 – "+o+" ("+h+")",dates:start+"/"+end,location:p,details:"Näldens IF U14\n"+h+"\nMotståndare: "+o+"\nPlats: "+p});
+ location.href="https://calendar.google.com/calendar/render?"+q;
+}
+function downloadICS(){
+ let s="BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Näldens IF//U14//SV\r\nCALSCALE:GREGORIAN\r\n";
+ events.forEach((e,i)=>{let[d,t,o,h,p]=e;let st=t?d.replaceAll("-","")+"T"+t.replace(":","")+"00":d.replaceAll("-","")+"T120000";let x=new Date((d)+"T"+(t||"12:00")+":00");x.setHours(x.getHours()+2);let pad=n=>String(n).padStart(2,"0");let en=x.getFullYear()+pad(x.getMonth()+1)+pad(x.getDate())+"T"+pad(x.getHours())+pad(x.getMinutes())+"00";s+="BEGIN:VEVENT\r\nUID:naldens-"+i+"@naldensif\r\nDTSTART;TZID=Europe/Stockholm:"+st+"\r\nDTEND;TZID=Europe/Stockholm:"+en+"\r\nSUMMARY:Näldens U14 – "+o+" ("+h+")\r\nLOCATION:"+p+"\r\nDESCRIPTION:"+h+" – "+o+" – "+(t||"Tid ej fastställd")+"\r\nEND:VEVENT\r\n";});s+="END:VCALENDAR\r\n";
+ const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([s],{type:"text/calendar"}));a.download="Naldens_U14_2026-27.ics";a.click();
+}
+async function copyPage(){try{await navigator.clipboard.writeText(location.href);alert("Länken är kopierad!");}catch(e){alert("Kopiera adressen från webbläsarens adressfält.");}}
+let last="";
+events.forEach(e=>{const [d,t,o,h,p]=e;const m=months[Number(d.slice(5,7))-1];if(m!==last){const hd=document.createElement("div");hd.className="month";hd.textContent=m[0].toUpperCase()+m.slice(1)+" "+d.slice(0,4);document.getElementById("list").appendChild(hd);last=m;}
+const x=document.createElement("article");x.className="card";const dt=new Date(d+"T12:00");const wd=dt.toLocaleDateString("sv-SE",{weekday:"short"});x.innerHTML='<div class="date"><div class="day">'+wd+'</div><div class="num">'+Number(d.slice(8))+'</div></div><div class="info"><div class="opp">'+o+'</div><div class="meta">🕒 '+(t||"Tid ej fastställd")+' · 📍 '+p+'</div><span class="tag '+(h==="Hemma"?"home":"away")+'">'+h.toUpperCase()+'</span>'+(t?'<br><button class="add">Lägg till i Google Kalender</button>':'<div class="note">Tid ej fastställd</div>')+'</div>';if(t)x.querySelector(".add").onclick=()=>gcal(e);document.getElementById("list").appendChild(x);});
+</script>
+</body></html>
