@@ -1,0 +1,222 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Näldens IF//U14 2026-27//SV
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Näldens IF U14 2026/27
+BEGIN:VEVENT
+UID:naldens-u14-0@naldensif
+DTSTART;TZID=Europe/Stockholm:20261003T160000
+DTEND;TZID=Europe/Stockholm:20261003T170000
+SUMMARY:Näldens U14 – Sundsvall (Borta)
+LOCATION:Brandcode Center
+DESCRIPTION:Borta – Sundsvall – 16:00
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-1@naldensif
+DTSTART;TZID=Europe/Stockholm:20261004T121500
+DTEND;TZID=Europe/Stockholm:20261004T131500
+SUMMARY:Näldens U14 – Kovland (Borta)
+LOCATION:FD Maskin Arena
+DESCRIPTION:Borta – Kovland – 12:15
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-2@naldensif
+DTSTART;TZID=Europe/Stockholm:20261004T151500
+DTEND;TZID=Europe/Stockholm:20261004T161500
+SUMMARY:Näldens U14 – Kovland (Borta)
+LOCATION:FD Maskin Arena
+DESCRIPTION:Borta – Kovland – 15:15
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-3@naldensif
+DTSTART;TZID=Europe/Stockholm:20261018T100000
+DTEND;TZID=Europe/Stockholm:20261018T110000
+SUMMARY:Näldens U14 – Sveg (Hemma)
+LOCATION:Näskotthallen
+DESCRIPTION:Hemma – Sveg – 10:00
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-4@naldensif
+DTSTART;TZID=Europe/Stockholm:20261018T140000
+DTEND;TZID=Europe/Stockholm:20261018T150000
+SUMMARY:Näldens U14 – Sveg (Hemma)
+LOCATION:Näskotthallen
+DESCRIPTION:Hemma – Sveg – 14:00
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-5@naldensif
+DTSTART;TZID=Europe/Stockholm:20261020T190000
+DTEND;TZID=Europe/Stockholm:20261020T200000
+SUMMARY:Näldens U14 – Svenstavik (Hemma)
+LOCATION:Näskotthallen
+DESCRIPTION:Hemma – Svenstavik – 19:00
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-6@naldensif
+DTSTART;TZID=Europe/Stockholm:20261024T094500
+DTEND;TZID=Europe/Stockholm:20261024T104500
+SUMMARY:Näldens U14 – Ånge IK (Borta)
+LOCATION:Kastbergshallen
+DESCRIPTION:Borta – Ånge IK – 09:45
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-7@naldensif
+DTSTART;TZID=Europe/Stockholm:20261030T200000
+DTEND;TZID=Europe/Stockholm:20261030T210000
+SUMMARY:Näldens U14 – Östersund (Borta)
+LOCATION:Östersund Arena Hall A
+DESCRIPTION:Borta – Östersund – 20:00
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-8@naldensif
+DTSTART;TZID=Europe/Stockholm:20261114T100000
+DTEND;TZID=Europe/Stockholm:20261114T110000
+SUMMARY:Näldens U14 – Järpen (Hemma)
+LOCATION:Näskotthallen
+DESCRIPTION:Hemma – Järpen – 10:00
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-9@naldensif
+DTSTART;TZID=Europe/Stockholm:20261121T180000
+DTEND;TZID=Europe/Stockholm:20261121T190000
+SUMMARY:Näldens U14 – Kovland (Hemma)
+LOCATION:Näskotthallen
+DESCRIPTION:Hemma – Kovland – 18:00
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-10@naldensif
+DTSTART;TZID=Europe/Stockholm:20261205T110000
+DTEND;TZID=Europe/Stockholm:20261205T120000
+SUMMARY:Näldens U14 – Sveg (Borta)
+LOCATION:Svegs Ishall
+DESCRIPTION:Borta – Sveg – 11:00
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-11@naldensif
+DTSTART;TZID=Europe/Stockholm:20261213T170000
+DTEND;TZID=Europe/Stockholm:20261213T180000
+SUMMARY:Näldens U14 – Svenstavik (Borta)
+LOCATION:Svenstaviks ishall
+DESCRIPTION:Borta – Svenstavik – 17:00
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-12@naldensif
+DTSTART;TZID=Europe/Stockholm:20270109T200000
+DTEND;TZID=Europe/Stockholm:20270109T210000
+SUMMARY:Näldens U14 – Östersund (Hemma)
+LOCATION:Näskotthallen
+DESCRIPTION:Hemma – Östersund – 20:00
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-13@naldensif
+DTSTART;TZID=Europe/Stockholm:20270110T120000
+DTEND;TZID=Europe/Stockholm:20270110T130000
+SUMMARY:Näldens U14 – Astor (Borta)
+LOCATION:Näskotthallen
+DESCRIPTION:Borta – Astor – Tid ej fastställd
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-14@naldensif
+DTSTART;TZID=Europe/Stockholm:20270116T110000
+DTEND;TZID=Europe/Stockholm:20270116T120000
+SUMMARY:Näldens U14 – Strömsund (Hemma)
+LOCATION:Näskotthallen
+DESCRIPTION:Hemma – Strömsund – 11:00
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-15@naldensif
+DTSTART;TZID=Europe/Stockholm:20270120T120000
+DTEND;TZID=Europe/Stockholm:20270120T130000
+SUMMARY:Näldens U14 – Järpen (Borta)
+LOCATION:Röjsmohallen
+DESCRIPTION:Borta – Järpen – Tid ej fastställd
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-16@naldensif
+DTSTART;TZID=Europe/Stockholm:20270124T110000
+DTEND;TZID=Europe/Stockholm:20270124T120000
+SUMMARY:Näldens U14 – Ånge IK (Hemma)
+LOCATION:Näskotthallen
+DESCRIPTION:Hemma – Ånge IK – 11:00
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-17@naldensif
+DTSTART;TZID=Europe/Stockholm:20270130T150000
+DTEND;TZID=Europe/Stockholm:20270130T160000
+SUMMARY:Näldens U14 – Sundsvall (Hemma)
+LOCATION:Näskotthallen
+DESCRIPTION:Hemma – Sundsvall – 15:00
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-18@naldensif
+DTSTART;TZID=Europe/Stockholm:20270216T190000
+DTEND;TZID=Europe/Stockholm:20270216T200000
+SUMMARY:Näldens U14 – Svenstavik (Hemma)
+LOCATION:Näskotthallen
+DESCRIPTION:Hemma – Svenstavik – 19:00
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-19@naldensif
+DTSTART;TZID=Europe/Stockholm:20270227T120000
+DTEND;TZID=Europe/Stockholm:20270227T130000
+SUMMARY:Näldens U14 – Ånge IK (Borta)
+LOCATION:Kastbergshallen
+DESCRIPTION:Borta – Ånge IK – Tid ej fastställd
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-20@naldensif
+DTSTART;TZID=Europe/Stockholm:20270306T120000
+DTEND;TZID=Europe/Stockholm:20270306T130000
+SUMMARY:Näldens U14 – Östersund (Borta)
+LOCATION:Östersund Arena Hall A
+DESCRIPTION:Borta – Östersund – Tid ej fastställd
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-21@naldensif
+DTSTART;TZID=Europe/Stockholm:20270307T103000
+DTEND;TZID=Europe/Stockholm:20270307T113000
+SUMMARY:Näldens U14 – Astor (Hemma)
+LOCATION:Näskotthallen
+DESCRIPTION:Hemma – Astor – 10:30
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-22@naldensif
+DTSTART;TZID=Europe/Stockholm:20270307T140000
+DTEND;TZID=Europe/Stockholm:20270307T150000
+SUMMARY:Näldens U14 – Astor (Hemma)
+LOCATION:Näskotthallen
+DESCRIPTION:Hemma – Astor – 14:00
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-23@naldensif
+DTSTART;TZID=Europe/Stockholm:20270313T100000
+DTEND;TZID=Europe/Stockholm:20270313T110000
+SUMMARY:Näldens U14 – Strömsund (Borta)
+LOCATION:Dunderhallen
+DESCRIPTION:Borta – Strömsund – 10:00
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-24@naldensif
+DTSTART;TZID=Europe/Stockholm:20270313T140000
+DTEND;TZID=Europe/Stockholm:20270313T150000
+SUMMARY:Näldens U14 – Strömsund (Borta)
+LOCATION:Dunderhallen
+DESCRIPTION:Borta – Strömsund – 14:00
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-25@naldensif
+DTSTART;TZID=Europe/Stockholm:20270320T100000
+DTEND;TZID=Europe/Stockholm:20270320T110000
+SUMMARY:Näldens U14 – Järpen (Hemma)
+LOCATION:Näskotthallen
+DESCRIPTION:Hemma – Järpen – 10:00
+END:VEVENT
+BEGIN:VEVENT
+UID:naldens-u14-26@naldensif
+DTSTART;TZID=Europe/Stockholm:20270327T120000
+DTEND;TZID=Europe/Stockholm:20270327T130000
+SUMMARY:Näldens U14 – Astor (Borta)
+LOCATION:Näskotthallen
+DESCRIPTION:Borta – Astor – Tid ej fastställd
+END:VEVENT
+END:VCALENDAR
